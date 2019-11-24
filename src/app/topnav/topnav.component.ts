@@ -11,34 +11,9 @@ import { Topnav } from "../models";
 export class TopnavComponent implements OnInit, OnDestroy {
   constructor(private router: Router) {}
 
-  topNav: Topnav;
-  private subscription: Subscription;
+  ngOnInit() {}
 
-  ngOnInit() {
-    this.createTopNavItems();
-  }
+  ngOnDestroy() {}
 
-  ngOnDestroy() {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
-  }
 
-  private createTopNavItems() {
-    this.topNav = {
-      home: [
-        {
-          textContent: "Home",
-          icon: "home",
-          svg: true,
-          click: () => this.gotoBlogPosts()
-        }
-      ],
-      commonItems: []
-    };
-  }
-
-  gotoBlogPosts() {
-    this.router.navigate([`/blog`]);
-  }
 }

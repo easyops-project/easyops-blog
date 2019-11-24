@@ -64,6 +64,10 @@ export class BlogPostDetailsComponent implements OnInit, AfterViewChecked {
     }
   }
 
+  formatDate(date: string): string {
+    return new Date(date).toLocaleString();
+  }
+
   getYear(): string {
     return new Date().getFullYear().toString();
   }

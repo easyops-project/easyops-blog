@@ -25,7 +25,8 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.scss",
-              "node_modules/prismjs/themes/prism-tomorrow.css"
+              "node_modules/prismjs/themes/prism-tomorrow.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },

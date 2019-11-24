@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { butterService } from "../services";
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: "app-blog-post-listing",
@@ -9,7 +10,7 @@ import { butterService } from "../services";
 export class BlogPostListingComponent implements OnInit {
   public posts: any[];
 
-  constructor() {}
+  constructor(private _spinner: NgxSpinnerService) {}
 
   months: string[] = [
     "",
@@ -28,6 +29,7 @@ export class BlogPostListingComponent implements OnInit {
   ];
 
   ngOnInit() {
+    this._spinner.show();
     butterService.post
       .list({
         page: 1,
@@ -35,7 +37,9 @@ export class BlogPostListingComponent implements OnInit {
       })
       .then(res => {
         this.posts = res.data.data;
-      });
+        this._spinner.hide();
+      })
+      .catch(() => this._spinner.hide());
   }
 
   getDay(post: any): string {

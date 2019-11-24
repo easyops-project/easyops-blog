@@ -1,0 +1,60 @@
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  text-align: left;
+  padding: 2rem 1rem;
+  color: rgba(255,255,255,.5);
+  background-color: #202020;
+  color: rgba(255,255,255,.5);
+
+  .sidebar-sticky {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+  }
+
+  .sidebar-about {
+    h1 {
+      color: #fff;
+      font-size: 3.25rem;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+
+    .lead {
+      font-size: 1.5rem;
+      font-weight: 300;
+      text-align: left;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+
+  .sidebar-nav {
+    .sidebar-nav-item {
+      display: block;
+      line-height: 1.75;
+      color: white;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.container {
+  max-width: 38rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}

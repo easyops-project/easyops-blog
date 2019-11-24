@@ -27,6 +27,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-size: 16px;
 }
 body {
   margin: 0;
@@ -562,15 +563,6 @@ body.search-overlay:after {
   width: 100%;
   padding-right: 10%;
   padding-left: 10%;
-}
-.search-wrapper *zoom 1:after,
-.search-wrapper *zoom 1:before {
-  display: table;
-  line-height: 0;
-  content: "";
-}
-.search-wrapper *zoom 1:after {
-  clear: both;
 }
 .search-wrapper:before,
 .search-wrapper:after {

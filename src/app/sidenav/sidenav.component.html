@@ -1,0 +1,21 @@
+<div class="sidenav">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a (click)="this.gotoBlogPosts()">
+          EasyOps
+        </a>
+      </h1>
+      <p class="lead">EasyOps is a PRJ400 project based around multi-cloud deployments using a simple to use DSL which follows natural language conventions to allow ease of deployment with IaS solutions.</p>
+    </div>
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item active" [routerLink]="['home']">Home</a>
+      <a class="sidebar-nav-item active" [routerLink]="['blog']">Blog</a>
+      <a class="sidebar-nav-item" href="https://github.com/alanj1998" target="_blank">GitHub</a>
+      <span class="sidebar-nav-item">Currently v0.1.0</span>
+    </nav>
+
+    <p>© {{this.getYear()}}. All rights reserved.</p>
+  </div>
+
+</div>

@@ -1,9 +1,7 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row class="equal_column_spacer">
-    <div>
-      <h2 (click)="item.click()" *ngFor="let item of topNav.home">
-        < Go Back
-      </h2>
-    </div>
-  </mat-toolbar-row>
-</mat-toolbar>
+<header>
+  <img
+    src="../../assets/easyops-logo.png"
+    height="100px"
+    (click)="this.gotoBlogPosts()"
+  />
+</header>

@@ -12,13 +12,17 @@ import { FormsModule } from "@angular/forms";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { AppMaterialModule } from "./shared/app-material.module";
 import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlogPostDetailsComponent,
     BlogPostListingComponent,
-    TopnavComponent
+    TopnavComponent,
+    SidenavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -18,8 +18,14 @@
   </div>
 </mat-card>
  -->
-<app-topnav></app-topnav>
+<div class="container">
 <section class="post">
+  <header>
+    <hr/>
+    <h1>{{post.data?.title}}</h1>
+    <p>{{this.formatDate(post.data?.published)}}</p>
+    <hr/>
+  </header>
   <article
     role="article"
     id="scroll"
@@ -48,3 +54,4 @@
     <p>EasyOps Blog, {{ this.getYear() }}</p>
   </footer>
 </section>
+</div>
