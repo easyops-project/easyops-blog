@@ -5,10 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-prod": "ng build --prod --base-href https://alanj1998.github.io/easyops-blog",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "deploy": "yarn build && "
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
