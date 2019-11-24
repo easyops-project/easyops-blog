@@ -5,7 +5,6 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BlogPostDetailsComponent } from "./blog-post-details/blog-post-details.component";
 import { BlogPostListingComponent } from "./blog-post-listing/blog-post-listing.component";
-import { TopnavComponent } from "./topnav/topnav.component";
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule } from "@angular/forms";
@@ -20,7 +19,6 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     BlogPostDetailsComponent,
     BlogPostListingComponent,
-    TopnavComponent,
     SidenavComponent,
     HomeComponent
   ],
