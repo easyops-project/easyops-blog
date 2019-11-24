@@ -1,37 +1,28 @@
-<mat-card>
-  <mat-card-title class="page-title">Blog Posts</mat-card-title>
-  <mat-divider></mat-divider>
-  <mat-card-content class="page-body">
-    <mat-card *ngFor="let post of posts">
-      <mat-card-title>
+<article class="post-item" *ngFor="let post of posts">
+  <a class="datetime">
+    <time>
+      <span class="day">
+        {{ this.getDay(post) }}
+      </span>
+      <span class="month-year">
+        {{ this.getMonth(post) }}
+      </span>
+    </time>
+  </a>
+  <div class="content">
+    <a [routerLink]="[post.slug]">
+      <h2 class="post-title">
+        {{ post.title }}
+      </h2>
+    </a>
+    <p class="description">
+      {{ post.summary }} <a [routerLink]="[post.slug]">Read More...</a>
+    </p>
 
-        <a [routerLink]="[post.slug]">
-          <div class="container">
-            <div fxLayout="row" fxLayout.xs="column"
-                 fxFlex class="content">
-              <div class="blocks">
-                <img *ngIf="post.featured_image" src="{{post.featured_image}}" alt="featured image"
-                     height="64" width="64"/>
-              </div>
-              <div class="blocks">
-                {{post.title}}
-              </div>
-            </div>
-          </div>
-          <div class="container">
-            <div fxLayout="column" class="summary">
-              <div [innerHTML]="post.summary"></div>
-            </div>
-          </div>
-        </a>
-      </mat-card-title>
-    </mat-card>
-  </mat-card-content>
-  <mat-divider></mat-divider>
-
-  <mat-card-footer>
-    <div class="page-footer">
-      <mat-icon>whatshot</mat-icon>
+    <div class="tags">
+      <a *ngFor="let tag of post.tags">
+        {{ tag.name }}
+      </a>
     </div>
-  </mat-card-footer>
-</mat-card>
+  </div>
+</article>
